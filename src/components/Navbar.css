@@ -1,0 +1,61 @@
+.hm-nav {
+  background-color: #2c3e50;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 33;
+}
+
+.hm-nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hm-nav-logo {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.hm-nav-logins {
+  display: flex;
+  gap: 1rem;
+}
+
+.hm-admin-login, .hm-user-login {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.hm-admin-login {
+  background-color: #4a9dff;
+  color: white;
+}
+
+.hm-admin-login:hover {
+  background-color: #3a8bef;
+}
+
+.hm-user-login {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.hm-user-login:hover {
+  background-color: #3e8e41;
+}
+
+@media (max-width: 768px) {
+  .hm-nav-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

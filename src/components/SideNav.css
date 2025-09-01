@@ -1,0 +1,242 @@
+.ds-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background-image: radial-gradient( circle farthest-corner at -24.7% -47.3%,  rgba(6,130,165,1) 0%, rgba(34,48,86,1) 66.8%, rgba(15,23,42,1) 100.2% );
+  color: white;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 4px 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.ds-sidebar.open {
+  width: 280px;
+}
+
+.ds-sidebar.closed {
+  width: 70px;
+}
+
+.ds-sidebar.mobile {
+  z-index: 1001;
+}
+
+.ds-sidebar-header {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  height: 80px;
+}
+
+.ds-logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.ds-logo-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #4a9dff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
+  color: white;
+}
+
+.ds-logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.ds-logo-title {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.ds-logo-subtitle {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.ds-close-btn, .ds-menu-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.ds-close-btn:hover, .ds-menu-btn:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.ds-menu-btn {
+  margin: 15px;
+}
+
+.ds-nav {
+  flex: 1;
+  overflow-y: auto;
+  padding: 15px 0;
+}
+
+.ds-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ds-nav li {
+  margin: 3px 0;
+  padding: 0 10px;
+}
+
+.ds-nav-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+}
+
+.ds-nav-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.ds-nav-btn.active {
+  background-color: rgba(74, 157, 255, 0.2);
+  color: white;
+  font-weight: 500;
+}
+
+.ds-nav-icon {
+  font-size: 18px;
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  min-width: 24px;
+}
+
+.ds-nav-text {
+  text-transform: capitalize;
+  font-size: 14px;
+}
+
+.ds-active-indicator {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background-color: #4a9dff;
+  border-radius: 4px 0 0 4px;
+}
+
+.ds-sidebar-footer {
+  padding: 15px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 12px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.ds-sidebar-footer strong {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+@media (max-width: 768px) {
+  .ds-sidebar.closed {
+    width: 0;
+    overflow: hidden;
+  }
+
+  .ds-sidebar.open {
+    width: 280px;
+  }
+}
+
+
+/* Add this new rule for mobile menu button */
+.ds-mobile-menu-btn {
+  position: fixed;
+  left: 10px;
+  top: 15px;
+  z-index: 999;
+  background: #3a4f6a;
+  border: none;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.ds-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  color: white;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 4px 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.ds-sidebar.open {
+  width: 250px;
+  transform: translateX(0);
+}
+
+.ds-sidebar.closed {
+  width: 0;
+  transform: translateX(-100%);
+}
+
+.ds-sidebar.mobile.open {
+  width: 280px;
+  transform: translateX(0);
+}
+
+.ds-sidebar.mobile.closed {
+  width: 0;
+  transform: translateX(-100%);
+}
+
+/* ... rest of your existing sidebar styles ... */
+
+@media (min-width: 769px) {
+  .ds-sidebar.closed {
+    width: 70px;
+    transform: translateX(0);
+  }
+  
+  .ds-mobile-menu-btn {
+    display: none;
+  }
+}

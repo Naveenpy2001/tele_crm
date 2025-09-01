@@ -1,0 +1,170 @@
+.fu-container {
+  padding: 20px;
+}
+
+.fu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.fu-title {
+  color: #2c3e50;
+  margin: 0;
+  font-size: 24px;
+}
+
+.fu-filters {
+  display: flex;
+  gap: 10px;
+}
+
+.fu-filter-btn {
+  padding: 8px 15px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.fu-filter-btn.active {
+  background-color: #4a9dff;
+  color: white;
+  border-color: #4a9dff;
+}
+
+.fu-search-container {
+  margin-bottom: 20px;
+}
+
+.fu-search {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 6px;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  max-width: 400px;
+}
+
+.fu-search-icon {
+  color: #888;
+  margin-right: 10px;
+}
+
+.fu-search-input {
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+.fu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.fu-item {
+  background: white;
+  border-radius: 8px;
+  padding: 15px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.fu-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.fu-item-name {
+  margin: 0;
+  color: #2c3e50;
+}
+
+.fu-item-phone {
+  color: #666;
+  font-size: 14px;
+}
+
+.fu-item-time {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #666;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.fu-time-icon {
+  color: #888;
+}
+
+.fu-item-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.fu-action-btn {
+  padding: 8px 15px;
+  border-radius: 6px;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.fu-done-btn {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.fu-cancel-btn {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+.fu-completed-badge {
+  padding: 8px 15px;
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .fu-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  
+  .fu-filters {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 10px;
+  }
+  
+  .fu-search {
+    max-width: 100%;
+  }
+  
+  .fu-item-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  
+  .fu-item-actions {
+    flex-wrap: wrap;
+  }
+}

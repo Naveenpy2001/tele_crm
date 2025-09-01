@@ -1,0 +1,172 @@
+/* Base Styles */
+.fp-container {
+  font-family: Arial, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.fp-loading, .fp-error {
+  text-align: center;
+  padding: 20px;
+  font-size: 18px;
+}
+
+.fp-controls {
+  margin-bottom: 20px;
+}
+
+.fp-search-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.fp-search-input, .fp-status-filter, .fp-date-filter {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.fp-table-responsive {
+  overflow-x: auto;
+}
+
+.fp-data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.fp-th, .fp-td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.fp-th {
+  background-color: #f5f5f5;
+  font-weight: bold;
+}
+
+.fp-tr {
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.fp-tr:hover {
+  background-color: #f9f9f9;
+}
+
+.fp-status-pending {
+  color: #ff9800;
+}
+
+.fp-status-confirmed {
+  color: #4caf50;
+}
+
+.fp-status-completed {
+  color: #2196f3;
+}
+
+.fp-status-cancelled {
+  color: #f44336;
+}
+
+.fp-no-data {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+}
+
+/* Detail View Styles */
+.fp-detail-view {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.fp-back-button {
+  background: none;
+  border: none;
+  color: #2196f3;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 20px;
+  padding: 5px 0;
+}
+
+.fp-detail-card {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.fp-detail-title {
+  margin-top: 0;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.fp-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.fp-detail-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.fp-detail-label {
+  font-weight: bold;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.fp-detail-value {
+  color: #333;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .fp-container {
+    padding: 10px;
+  }
+  
+  .fp-th, .fp-td {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+  
+  .fp-search-filter {
+    flex-direction: column;
+  }
+  
+  .fp-search-input, .fp-status-filter, .fp-date-filter {
+    width: 100%;
+  }
+  
+  .fp-detail-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .fp-data-table {
+    font-size: 13px;
+  }
+  
+  .fp-th, .fp-td {
+    padding: 6px 8px;
+  }
+  
+  .fp-detail-card {
+    padding: 15px;
+  }
+}

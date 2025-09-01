@@ -1,0 +1,86 @@
+.anr-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.anr-title {
+  color: #2c3e50;
+  margin-bottom: 25px;
+  font-size: 24px;
+  text-align: center;
+}
+
+.anr-form {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.anr-form-group {
+  margin-bottom: 20px;
+}
+
+.anr-label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #3a4f6a;
+}
+
+.anr-icon {
+  margin-right: 10px;
+  color: #4a9dff;
+}
+
+.anr-input, .anr-textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+.anr-input:focus, .anr-textarea:focus {
+  outline: none;
+  border-color: #4a9dff;
+}
+
+.anr-textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.anr-submit-btn {
+  background-color: #4a9dff;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.anr-submit-btn:hover {
+  background-color: #3a8bef;
+}
+
+@media (max-width: 768px) {
+  .anr-container {
+    padding: 15px;
+  }
+  
+  .anr-form {
+    padding: 20px 15px;
+  }
+  
+  .anr-title {
+    font-size: 20px;
+  }
+}

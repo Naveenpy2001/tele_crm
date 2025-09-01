@@ -1,0 +1,502 @@
+/* Base styles */
+.up-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.up-title {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Success message */
+.up-success-message {
+  background: #d4edda;
+  color: #155724;
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.up-success-close {
+  cursor: pointer;
+  font-size: 1.2em;
+}
+
+/* Upload area */
+.up-upload-area {
+  background: #f8f9fa;
+  border: 2px dashed #dee2e6;
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* File input */
+.up-file-input-container {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.up-file-input {
+  display: none;
+}
+
+.up-file-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  padding: 20px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.up-file-label:hover {
+  background-color: #e9ecef;
+}
+
+.up-upload-icon {
+  width: 48px;
+  height: 48px;
+  fill: #6c757d;
+  margin-bottom: 10px;
+}
+
+.up-file-name {
+  font-weight: 500;
+  color: #495057;
+}
+
+/* File info */
+.up-file-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.up-file-details {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.up-file-size {
+  color: #6c757d;
+  font-size: 0.9em;
+}
+
+.up-remove-button {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.up-remove-button:hover {
+  background: #c82333;
+}
+
+.up-remove-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Progress bar */
+.up-progress-container {
+  background: #e9ecef;
+  border-radius: 4px;
+  height: 20px;
+  margin: 20px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.up-progress-bar {
+  background: #007bff;
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+.up-progress-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #495057;
+  font-size: 0.9em;
+}
+
+/* Error message */
+.up-error-message {
+  color: #dc3545;
+  margin: 10px 0;
+  padding: 10px;
+  background: #f8d7da;
+  border-radius: 4px;
+}
+
+/* Upload button */
+.up-upload-button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+.up-upload-button:hover {
+  background: #0056b3;
+}
+
+.up-upload-button:disabled {
+  background: #6c757d;
+  cursor: not-allowed;
+}
+
+/* New styles for the data table */
+.up-data-table-container {
+  margin-top: 30px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.up-data-table-container h3 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.up-table-actions {
+  margin-bottom: 20px;
+  text-align: right;
+}
+
+.up-assign-button {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.up-assign-button:hover {
+  background: #218838;
+}
+
+.up-assign-button:disabled {
+  background: #6c757d;
+  cursor: not-allowed;
+}
+
+.up-data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.up-data-table th,
+.up-data-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.up-data-table th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  color: #495057;
+}
+
+.up-data-table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+.up-data-table input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .up-container {
+    padding: 1rem;
+  }
+  
+  .up-upload-area {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .up-title {
+    font-size: 1.5rem;
+  }
+  
+  .up-upload-area {
+    padding: 1rem;
+  }
+  
+  .up-file-info {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+  
+  .up-remove-button {
+    align-self: flex-end;
+  }
+}
+
+.up-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #dee2e6;
+  padding-bottom: 10px;
+}
+
+.up-tab {
+  padding: 10px 20px;
+  border: none;
+  background: none;
+  font-size: 1em;
+  color: #6c757d;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.up-tab:hover {
+  color: #495057;
+}
+
+.up-tab.active {
+  color: #007bff;
+  font-weight: 500;
+}
+
+.up-tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #007bff;
+}
+
+.up-tab:disabled {
+  color: #adb5bd;
+  cursor: not-allowed;
+}
+
+.up-tab-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  font-size: 0.75em;
+  font-weight: 600;
+  color: #fff;
+  background-color: #007bff;
+  border-radius: 10px;
+  margin-left: 8px;
+}
+
+.up-no-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  text-align: center;
+  background: #f8f9fa;
+  border-radius: 8px;
+  min-height: 300px;
+}
+
+.up-no-data-icon {
+  width: 64px;
+  height: 64px;
+  fill: #adb5bd;
+  margin-bottom: 20px;
+}
+
+.up-no-data h3 {
+  color: #495057;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.up-no-data p {
+  color: #6c757d;
+  margin-bottom: 20px;
+}
+
+.up-no-data .up-upload-button {
+  min-width: 150px;
+}
+
+.up-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.up-modal {
+  background: white;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: modalFadeIn 0.3s ease-out;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.up-modal-header {
+  padding: 20px;
+  border-bottom: 1px solid #dee2e6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.up-modal-header h3 {
+  margin: 0;
+  color: #333;
+  font-size: 1.25em;
+}
+
+.up-modal-close {
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  color: #6c757d;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
+
+.up-modal-close:hover {
+  color: #343a40;
+}
+
+.up-modal-body {
+  padding: 20px;
+}
+
+.up-modal-body p {
+  margin-bottom: 20px;
+  color: #495057;
+}
+
+.up-form-group {
+  margin-bottom: 20px;
+}
+
+.up-form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #495057;
+  font-weight: 500;
+}
+
+.up-select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 1em;
+  color: #495057;
+  background-color: white;
+  transition: border-color 0.3s;
+}
+
+.up-select:focus {
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.up-modal-footer {
+  padding: 20px;
+  border-top: 1px solid #dee2e6;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.up-cancel-button {
+  padding: 8px 16px;
+  border: 1px solid #6c757d;
+  background: white;
+  color: #6c757d;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.up-cancel-button:hover {
+  background: #f8f9fa;
+}
+
+.up-confirm-button {
+  padding: 8px 16px;
+  border: none;
+  background: #28a745;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.up-confirm-button:hover {
+  background: #218838;
+}
+
+.up-confirm-button:disabled {
+  background: #6c757d;
+  cursor: not-allowed;
+}

@@ -1,0 +1,124 @@
+.user-auth-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f7fa;
+  padding: 20px;
+}
+
+.user-auth-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 100%;
+  max-width: 450px;
+}
+
+.user-auth-title {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 25px;
+  font-size: 24px;
+}
+
+.user-auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.user-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.user-form-group label {
+  font-weight: 500;
+  color: #555;
+}
+
+.user-form-group input {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.user-form-group input:focus {
+  outline: none;
+  border-color: #4CAF50;
+}
+
+.user-auth-btn {
+  padding: 12px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 44px;
+}
+
+.user-auth-btn:hover {
+  background-color: #3e8e41;
+}
+
+.user-auth-error {
+  padding: 12px;
+  background-color: #ffebee;
+  color: #c62828;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.user-auth-success {
+  padding: 12px;
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.user-auth-links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.user-auth-links a {
+  color: #4CAF50;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.user-auth-links a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .user-auth-card {
+    padding: 20px;
+  }
+  
+  .user-auth-title {
+    font-size: 20px;
+  }
+  
+  .user-auth-links {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+}

@@ -1,0 +1,396 @@
+/* Main Container */
+.ds-home-container {
+  width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+/* Error Message */
+.ds-error-message {
+  background-color: #fee2e2;
+  color: #dc2626;
+  padding: 12px 16px;
+  border-radius: 6px;
+  margin: 16px 0;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #fecaca;
+}
+
+/* Header Styles */
+.ds-home-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 15px 0;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.ds-home-header h2 {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* Search Box */
+.ds-search-box {
+  position: relative;
+  min-width: 300px;
+}
+
+.ds-search-box input {
+  width: 100%;
+  padding: 10px 15px 10px 40px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #f8f9fa;
+  transition: all 0.3s ease;
+}
+
+.ds-search-box input:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.ds-search-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #7f8c8d;
+}
+
+/* Table Styles */
+.ds-table-container {
+  overflow-x: auto;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+}
+
+.ds-records-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ds-records-table th,
+.ds-records-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ecf0f1;
+}
+
+.ds-records-table th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  color: #2c3e50;
+  position: sticky;
+  top: 0;
+}
+
+.ds-records-table tr {
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
+
+.ds-records-table tr:hover {
+  background-color: #f8f9fa;
+}
+
+/* Status Badges */
+.ds-status {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  display: inline-block;
+  min-width: 80px;
+  text-align: center;
+}
+
+.ds-status-pending {
+  background-color: #fef9e7;
+  color: #f39c12;
+  border: 1px solid #fdebd0;
+}
+
+.ds-status-approved {
+  background-color: #e8f8f5;
+  color: #27ae60;
+  border: 1px solid #d5f5e3;
+}
+
+.ds-status-rejected {
+  background-color: #fdedec;
+  color: #e74c3c;
+  border: 1px solid #fadbd8;
+}
+
+.ds-status-in-progress {
+  background-color: #ebf5fb;
+  color: #2980b9;
+  border: 1px solid #d4e6f1;
+}
+
+/* Button Styles */
+.ds-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.ds-btn svg {
+  font-size: 16px;
+}
+
+.ds-edit-btn {
+  background-color: #e8f4fd;
+  color: #2980b9;
+  border: 1px solid #d4e6f1;
+}
+
+.ds-edit-btn:hover {
+  background-color: #d4e6f1;
+}
+
+.ds-save-btn {
+  background-color: #27ae60;
+  color: white;
+}
+
+.ds-save-btn:hover {
+  background-color: #219955;
+}
+
+.ds-cancel-btn {
+  background-color: #f8f9fa;
+  color: #7f8c8d;
+  border: 1px solid #ddd;
+}
+
+.ds-cancel-btn:hover {
+  background-color: #ecf0f1;
+}
+
+.ds-back-btn {
+  background-color: #3498db;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.ds-back-btn:hover {
+  background-color: #2980b9;
+}
+
+/* User Details View */
+.ds-user-details {
+  background-color: white;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.ds-user-card {
+  border: 1px solid #ecf0f1;
+  border-radius: 8px;
+  padding: 25px;
+  background-color: #f8f9fa;
+}
+
+.ds-user-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ecf0f1;
+}
+
+.ds-user-header h3 {
+  color: #2c3e50;
+  margin: 0;
+  font-size: 20px;
+}
+
+.ds-user-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.ds-info-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.ds-info-label {
+  font-weight: 500;
+  color: #7f8c8d;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.ds-info-value {
+  padding: 10px 15px;
+  background-color: white;
+  border-radius: 6px;
+  font-size: 15px;
+  border: 1px solid #ecf0f1;
+}
+
+.ds-status-update {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #ecf0f1;
+}
+
+.ds-status-update h4 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.ds-status-select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  background-color: white;
+  font-size: 14px;
+}
+
+/* Modal Styles */
+.ds-edit-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.ds-modal-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 450px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.ds-modal-content h3 {
+  color: #2c3e50;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.ds-modal-content select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 25px;
+  font-size: 14px;
+}
+
+.ds-modal-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+}
+
+/* Pagination */
+.ds-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 25px 0;
+}
+
+.ds-pagination-btn {
+  padding: 8px 15px;
+  border: 1px solid #ddd;
+  background-color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 14px;
+}
+
+.ds-pagination-btn:hover:not(:disabled) {
+  background-color: #f8f9fa;
+}
+
+.ds-pagination-btn.active {
+  background-color: #3498db;
+  color: white;
+  border-color: #3498db;
+}
+
+.ds-pagination-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Loading and Empty States */
+.ds-loading,
+.ds-no-data {
+  text-align: center;
+  padding: 40px;
+  color: #7f8c8d;
+  font-size: 16px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .ds-home-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+  }
+
+  .ds-search-box {
+    width: 100%;
+  }
+
+  .ds-records-table th,
+  .ds-records-table td {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .ds-user-info {
+    grid-template-columns: 1fr;
+  }
+
+  .ds-modal-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .ds-modal-actions .ds-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

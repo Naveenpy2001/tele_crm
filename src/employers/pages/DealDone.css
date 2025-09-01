@@ -1,0 +1,151 @@
+.dd-container {
+  padding: 20px;
+}
+
+.dd-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.dd-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #2c3e50;
+  margin: 0;
+  font-size: 24px;
+}
+
+.dd-title-icon {
+  color: #4CAF50;
+}
+
+.dd-search {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 6px;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  min-width: 250px;
+}
+
+.dd-search-icon {
+  color: #888;
+  margin-right: 10px;
+}
+
+.dd-search-input {
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+.dd-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.dd-stat-card {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.dd-stat-card.highlight {
+  background: linear-gradient(135deg, #4CAF50, #8BC34A);
+  color: white;
+}
+
+.dd-stat-title {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.dd-stat-card.highlight .dd-stat-title {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.dd-stat-value {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.dd-stat-card.highlight .dd-stat-value {
+  color: white;
+}
+
+.dd-table-container {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.dd-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.dd-table th, .dd-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.dd-table th {
+  background-color: #f9fafb;
+  color: #666;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dd-amount {
+  color: #4CAF50;
+  font-weight: 500;
+}
+
+.dd-view-btn {
+  background-color: #f1f8e9;
+  color: #689F38;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.dd-view-btn:hover {
+  background-color: #dcedc8;
+}
+
+@media (max-width: 768px) {
+  .dd-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .dd-search {
+    width: 100%;
+  }
+  
+  .dd-stats {
+    grid-template-columns: 1fr;
+  }
+  
+  .dd-table {
+    display: block;
+    overflow-x: auto;
+  }
+}

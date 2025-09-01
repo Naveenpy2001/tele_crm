@@ -1,0 +1,64 @@
+.ds-main-content {
+  min-height: 100vh;
+  background-color: #f5f7fa;
+  transition: all 0.3s ease;
+  margin-left: 250px;
+  width: 100%;
+}
+
+.ds-main-content.sidebar-closed {
+  margin-left: 70px;
+  width: 100%;
+}
+
+.ds-content-header {
+  padding: 20px 30px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid #eaeef3;
+}
+
+.ds-content-title {
+  font-size: 24px;
+  color: #2c3e50;
+  font-weight: 600;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.ds-content-page {
+  padding: 30px;
+  background-color: white;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.ds-content-page h2 {
+  color: #3a4f6a;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .ds-main-content {
+    margin-left: 0;
+  }
+
+  .ds-main-content.sidebar-closed {
+    margin-left: 70px;
+  }
+
+  .ds-content-header {
+    padding: 15px 20px;
+  }
+
+  .ds-content-title {
+    font-size: 20px;
+  }
+
+  .ds-content-page {
+    padding: 20px;
+    margin: 15px;
+  }
+}
